@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: Arial,Sans-serif;
+}
+
+.cabecalho {
+    background-color: #2168c4;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    box-sizing: border-box;
+}
+
+.acoes img {
+    object-fit: contain;
+    width: 4rem;
+    height: 4rem;
+}
+
+.menu-desktop img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+.acoes button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-desktop {
+    background:transparent;
+    border: none;
+    display: none;
+}
+
+.susPrincipal {
+    display: flex;
+    align-items: center;
+    gap: 10px   ;
+}
+
+.susPrincipal h1 {
+    margin: 0;
+}
+
+@media (min-width: 1024px) {
+    .menu-desktop {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.asideBar {
+    position: fixed;
+    top: 6rem;
+    left: 0px;
+    width: 45%;
+    height: calc(100dvh - 6rem);
+    background-color: #e5f1ff;
+}
