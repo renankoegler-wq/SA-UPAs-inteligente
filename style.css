@@ -65,6 +65,20 @@ body {
     transition: transform 0.3s ease;
 }
 
+.asideBar h2 {
+    margin: 5px;
+}
+
+.asideBar p {
+    margin: 5px
+}
+
 .asideBar.aberta {
     transform: translateX(0%);
+}
+
+.saudacoes {
+    background-color: #CCC6C6;
+    top: 7rem;
+    height: 100px;
 }
