@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPAs inteligente</title>
+    <link rel="stylesheet" href="stylelistagem.css">
+</head>
+<body>
+    <header class="cabecalho">
+        
+        <div class="susPrincipal">
+            <button class="menu-desktop">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUgcHJldmlldy1pY29uIj48cGF0aCBkPSJNNCA1aDE2Ii8+PHBhdGggZD0iTTQgMTJoMTYiLz48cGF0aCBkPSJNNCAxOWgxNiIvPjwvc3ZnPg==" alt="botão de barra lateral">
+            </button>
+
+            <h1>SUS</h1>
+
+        </div>
+
+        <div class="acoes">
+
+            <button>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJlbGwgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTAuMjY4IDIxYTIgMiAwIDAgMCAzLjQ2NCAwIi8+PHBhdGggZD0iTTMuMjYyIDE1LjMyNkExIDEgMCAwIDAgNCAxN2gxNmExIDEgMCAwIDAgLjc0LTEuNjczQzE5LjQxIDEzLjk1NiAxOCAxMi40OTkgMTggOEE2IDYgMCAwIDAgNiA4YzAgNC40OTktMS40MTEgNS45NTYtMi43MzggNy4zMjYiLz48L3N2Zz4=" alt="botão de notificação">
+            </button>
+
+            <button>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTkgMjF2LTJhNCA0IDAgMCAwLTQtNEg5YTQgNCAwIDAgMC00IDR2MiIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iNyIgcj0iNCIvPjwvc3ZnPg==" alt="botão de usuario">
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="título">
+            <h2>Listagem de UPAs</h2>
+            <p>Pesquise e adicione suas unidades.</p>
+        </section>
+            <section class="pesquisa">
+                <form>
+                    <label for="pesquisa">Pesquisar UPA</label>
+
+                    <input type="search"
+                    id="pesquisa"
+                    name="pesquisa"
+                    placeholder="Pesquisar UPA...">
+
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </section>
+   
+
+    <div class="container-upas">
+
+        <section class="upa-selecionada">
+
+            <img src="imagens/upa.jpg" alt="Unidade de Pronto Atendimento">
+        
+
+        <h3>UPA selecionada</h3>
+        <p>Informações da Unidade</p>
+        <button type="button" id="adicionar-upa">
+                    Adicionar UPA
+                </button>
+
+                </section>
+
+                <section class="upas-salvas">
+
+                <h3>UPAs salvas</h3>
+
+                <ul id="lista-upas">
+                    <li>UPA 01</li>
+                    <li>UPA 02</li>
+                    <li>UPA 03</li>
+                </ul>
+
+            </section>
+    </div>
+
+    </main>
+
+   
+        
+    </body>
+
+  </html>
