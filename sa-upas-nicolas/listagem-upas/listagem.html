@@ -1,87 +1,235 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPAs inteligente</title>
+    <title>Listagem de UPAs | SUS</title>
     <link rel="stylesheet" href="stylelistagem.css">
 </head>
+
 <body>
+
+    <a class="pular-conteudo" href="#conteudo">
+        Ir para o conteúdo principal
+    </a>
+
     <header class="cabecalho">
-        
-        <div class="susPrincipal">
-            <button class="menu-desktop">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUgcHJldmlldy1pY29uIj48cGF0aCBkPSJNNCA1aDE2Ii8+PHBhdGggZD0iTTQgMTJoMTYiLz48cGF0aCBkPSJNNCAxOWgxNiIvPjwvc3ZnPg==" alt="botão de barra lateral">
-            </button>
+        <div class="limite linha">
 
-            <h1>SUS</h1>
+            <a class="marca" href="../../index.html"
+               aria-label="SUS UPAs Inteligente, página inicial">
 
-        </div>
+                <span class="marca-sus">SUS</span>
+                <span>UPAs Inteligente</span>
 
-        <div class="acoes">
+            </a>
 
-            <button>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJlbGwgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTAuMjY4IDIxYTIgMiAwIDAgMCAzLjQ2NCAwIi8+PHBhdGggZD0iTTMuMjYyIDE1LjMyNkExIDEgMCAwIDAgNCAxN2gxNmExIDEgMCAwIDAgLjc0LTEuNjczQzE5LjQxIDEzLjk1NiAxOCAxMi40OTkgMTggOEE2IDYgMCAwIDAgNiA4YzAgNC40OTktMS40MTEgNS45NTYtMi43MzggNy4zMjYiLz48L3N2Zz4=" alt="botão de notificação">
-            </button>
+            <div class="acoes">
 
-            <button>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTkgMjF2LTJhNCA0IDAgMCAwLTQtNEg5YTQgNCAwIDAgMC00IDR2MiIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iNyIgcj0iNCIvPjwvc3ZnPg==" alt="botão de usuario">
-            </button>
+                <button class="botao-icone"
+                        type="button"
+                        aria-label="Notificações"
+                        disabled>
+
+                    <span aria-hidden="true">🔔︎</span>
+
+                </button>
+
+                <button class="botao-icone"
+                        type="button"
+                        aria-label="Perfil"
+                        disabled>
+
+                    <span aria-hidden="true">👤︎</span>
+
+                </button>
+
+            </div>
 
         </div>
     </header>
 
-    <main>
-        <section class="título">
-            <h2>Listagem de UPAs</h2>
-            <p>Pesquise e adicione suas unidades.</p>
+    <main id="conteudo" tabindex="-1">
+
+        <section class="título" aria-labelledby="titulo-pagina">
+
+            <span class="identificacao">Serviços de saúde</span>
+
+            <h1 id="titulo-pagina">Listagem de UPAs</h1>
+
+            <p>Selecione sua cidade e encontre as unidades de pronto atendimento.</p>
+
         </section>
-            <section class="pesquisa">
-                <form>
-                    <label for="pesquisa">Pesquisar UPA</label>
 
-                    <input type="search"
-                    id="pesquisa"
-                    name="pesquisa"
-                    placeholder="Pesquisar UPA...">
+        <section class="pesquisa" aria-label="Seleção de cidade">
 
-                    <button type="submit">Pesquisar</button>
-                </form>
+            <label for="cidade">Selecionar cidade</label>
+
+            <select id="cidade"
+                    name="cidade"
+                    aria-controls="unidades-disponiveis">
+
+                <option value="">Selecione uma cidade</option>
+                <option value="joinville">Joinville - SC</option>
+
+            </select>
+
+        </section>
+
+        <section class="unidades-disponiveis"
+                 id="unidades-disponiveis"
+                 aria-labelledby="titulo-disponiveis"
+                 hidden>
+
+            <h2 id="titulo-disponiveis">
+                Unidades disponíveis em Joinville
+            </h2>
+
+            <ul id="lista-disponiveis"></ul>
+
+        </section>
+
+        <div class="container-upas">
+
+            <section class="upa-selecionada"
+                     id="detalhes-upa"
+                     aria-labelledby="nome-upa"
+                     tabindex="-1">
+
+                <h2 id="nome-upa">UPA selecionada</h2>
+
+                <div class="informacoes-upa">
+
+                    <img id="imagem-upa"
+                         src="imagens/upa.jpg"
+                         alt="Imagem ilustrativa de uma unidade de pronto atendimento">
+
+                    <p id="informacao-upa">
+                        Selecione uma unidade para visualizar suas informações.
+                    </p>
+
+                    <button type="button"
+                            id="adicionar-upa"
+                            aria-controls="lista-upas"
+                            disabled>
+
+                        Adicionar UPA
+
+                    </button>
+
+                </div>
+
             </section>
-   
 
-    <div class="container-upas">
+            <section class="upas-salvas"
+                     aria-labelledby="titulo-salvas">
 
-        <section class="upa-selecionada">
+                <h2 id="titulo-salvas" tabindex="-1">
+                    UPAs salvas
+                </h2>
 
-            <img src="imagens/upa.jpg" alt="Unidade de Pronto Atendimento">
-        
-
-        <h3>UPA selecionada</h3>
-        <p>Informações da Unidade</p>
-        <button type="button" id="adicionar-upa">
-                    Adicionar UPA
-                </button>
-
-                </section>
-
-                <section class="upas-salvas">
-
-                <h3>UPAs salvas</h3>
-
-                <ul id="lista-upas">
-                    <li>UPA 01</li>
-                    <li>UPA 02</li>
-                    <li>UPA 03</li>
-                </ul>
+                <ul id="lista-upas"></ul>
 
             </section>
-    </div>
+
+        </div>
+
+        <p class="mensagem"
+           id="mensagem"
+           role="status"
+           aria-live="polite"></p>
 
     </main>
 
-   
-        
-    </body>
+    <nav class="navegacao" aria-label="Navegação principal">
 
-  </html>
+        <div class="limite atalhos">
+
+            <a href="../../index.html">
+                <span class="simbolo" aria-hidden="true">⌂</span>
+                Início
+            </a>
+
+            <button type="button" disabled>
+                <span class="simbolo" aria-hidden="true">⚠︎</span>
+                Alertas
+            </button>
+
+            <button class="localizacao" type="button" disabled>
+                <span class="simbolo" aria-hidden="true">📍︎</span>
+                Localizar
+            </button>
+
+            <a href="listagem.html" aria-current="page">
+                <span class="simbolo" aria-hidden="true">✚</span>
+                UPAs
+            </a>
+
+            <button id="abrir-menu"
+                    type="button"
+                    aria-haspopup="dialog"
+                    aria-controls="menu"
+                    aria-expanded="false">
+
+                <span class="simbolo" aria-hidden="true">☰</span>
+                Menu
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <dialog id="menu"
+            class="menu"
+            aria-labelledby="titulo-menu">
+
+        <div class="linha">
+
+            <h2 id="titulo-menu">SUS</h2>
+
+            <form method="dialog">
+
+                <button class="botao-icone"
+                        aria-label="Fechar menu"
+                        autofocus>
+
+                    ×
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <p>Versão 6.7.6.7 beta</p>
+
+        <ul class="lista">
+
+            <li>
+                <button class="servico" type="button" disabled>
+                    Termos de uso e aviso de privacidade
+                </button>
+            </li>
+
+            <li>
+                <button class="servico" type="button" disabled>
+                    Sair do aplicativo
+                </button>
+            </li>
+
+            <li>
+                <button class="servico" type="button" disabled>
+                    Deslogar e sair
+                </button>
+            </li>
+
+        </ul>
+
+    </dialog>
+
+    <script src="listagemscript.js"></script>
+
+</body>
+</html>
