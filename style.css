@@ -95,7 +95,6 @@ button:disabled {
     color: var(--azul);
 }
 
-/* Banner e lista de serviços */
 .saudacao {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 24%;
@@ -176,7 +175,6 @@ a.servico:hover, button.botao-icone:enabled:hover {
     background: var(--azul-claro);
 }
 
-/* Navegação inferior */
 .navegacao {
     position: fixed;
     inset: auto 0 0;
@@ -225,7 +223,6 @@ a.servico:hover, button.botao-icone:enabled:hover {
     color: #17613a;
 }
 
-/* O diálogo nativo escurece o fundo e mantém o foco dentro do menu. */
 .menu {
     position: fixed;
     inset: 0 auto 0 0;
@@ -257,7 +254,6 @@ a.servico:hover, button.botao-icone:enabled:hover {
     border-top: 1px solid var(--borda);
 }
 
-/* Em telas maiores, os serviços ficam lado a lado. */
 @media (min-width: 48rem) {
     .saudacao {
         min-height: 13rem;
