@@ -254,6 +254,22 @@ a.servico:hover, button.botao-icone:enabled:hover {
     border-top: 1px solid var(--borda);
 }
 
+/* Fim do css do index */
+
+/*Começo do css do login */
+
+.login {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKlQ9o8Z4j6LbmNN1pv0z2aCvE2kU1FWu4yOF_UNYmzQ&s=10") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    image-rendering: -webkit-optimize-contrast;
+
+}
+
+/* Começo da parte calculada do index. */
+
 @media (min-width: 48rem) {
     .saudacao {
         min-height: 13rem;
