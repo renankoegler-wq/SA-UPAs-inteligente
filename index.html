@@ -1,48 +1,106 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPAs inteligente</title>
+    <title>UPAs Inteligente</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body id="inicio">
     <header class="cabecalho">
-        
-        <div class="susPrincipal">
-            <button class="menu-desktop">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUgcHJldmlldy1pY29uIj48cGF0aCBkPSJNNCA1aDE2Ii8+PHBhdGggZD0iTTQgMTJoMTYiLz48cGF0aCBkPSJNNCAxOWgxNiIvPjwvc3ZnPg==" alt="botão de barra lateral">
-            </button>
+        <div class="limite linha">
+            <a class="marca" href="#inicio">
+                <span class="marca-sus">SUS</span>
+                <span>UPAs Inteligente</span>
+            </a>
 
-            <h1>SUS</h1>
-
-        </div>
-
-        <div class="acoes">
-
-            <button>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJlbGwgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTAuMjY4IDIxYTIgMiAwIDAgMCAzLjQ2NCAwIi8+PHBhdGggZD0iTTMuMjYyIDE1LjMyNkExIDEgMCAwIDAgNCAxN2gxNmExIDEgMCAwIDAgLjc0LTEuNjczQzE5LjQxIDEzLjk1NiAxOCAxMi40OTkgMTggOEE2IDYgMCAwIDAgNiA4YzAgNC40OTktMS40MTEgNS45NTYtMi43MzggNy4zMjYiLz48L3N2Zz4=" alt="botão de notificação">
-            </button>
-
-            <button>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIgcHJldmlldy1pY29uIj48cGF0aCBkPSJNMTkgMjF2LTJhNCA0IDAgMCAwLTQtNEg5YTQgNCAwIDAgMC00IDR2MiIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iNyIgcj0iNCIvPjwvc3ZnPg==" alt="botão de usuario">
-            </button>
-
+            <div class="acoes">
+                <button class="botao-icone" type="button" aria-label="Notificações" disabled>
+                    <span aria-hidden="true">🔔︎</span>
+                </button>
+                <button class="botao-icone" type="button" aria-label="Perfil" disabled>
+                    <span aria-hidden="true">👤︎</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <aside class="asideBar">
-        <h2>SUS</h2>
-        <p>versão 6.7 beta</p>
-    </aside>
-    <main>
+    <main class="limite">
+        <section class="saudacao" aria-labelledby="titulo">
+            <div>
+                <h1 id="titulo">Olá, usuário!</h1>
+                <p>Encontre unidades de pronto atendimento e acesse os serviços do portal.</p>
+            </div>
+            <img src="assets/pessoas.svg" alt="">
+        </section>
 
-        <div class="saudacoes">
-            <h2>Olá, <strong>Usuário</strong></h2>
-        </div>
-
+        <section class="servicos" aria-labelledby="titulo-servicos">
+            <h2 id="titulo-servicos">Serviços</h2>
+            
+            <ul class="lista">
+                <li>
+                    <a class="servico" href="sa-upas-nicolas/listagem-upas/listagem.html">
+                        <span class="icone" aria-hidden="true">✚</span> UPAs
+                    </a>
+                </li>
+                <li>
+                    <button class="servico" type="button" disabled>
+                        <span class="icone" aria-hidden="true">✉</span> Caixa postal
+                    </button>
+                </li>
+                <li>
+                    <button class="servico" type="button" disabled>
+                        <span class="icone" aria-hidden="true">⚙︎</span> Preferências
+                    </button>
+                </li>
+                <li>
+                    <a class="servico" href="https://www.gov.br/pt-br">
+                        <span class="icone" aria-hidden="true">▦</span> GovBR
+                    </a>
+                </li>
+                <li>
+                    <button class="servico" type="button" disabled>
+                        <span class="icone" aria-hidden="true">☷</span> Classificações
+                    </button>
+                </li>
+            </ul>
+        </section>
     </main>
 
-    <script src="script.js"></script>
+    <nav class="navegacao" aria-label="Navegação principal">
+        <div class="limite atalhos">
+            <a href="#inicio" aria-current="page">
+                <span class="simbolo" aria-hidden="true">⌂</span> Início
+            </a>
+            <button type="button" disabled>
+                <span class="simbolo" aria-hidden="true">⚠︎</span> Alertas
+            </button>
+            <button class="localizacao" type="button" disabled>
+                <span class="simbolo" aria-hidden="true">📍︎</span> Localizar
+            </button>
+            <a href="sa-upas-nicolas/listagem-upas/listagem.html">
+                <span class="simbolo" aria-hidden="true">✚</span> UPAs
+            </a>
+            <button id="abrir-menu" type="button" aria-haspopup="dialog" aria-controls="menu">
+                <span class="simbolo" aria-hidden="true">☰</span> Menu
+            </button>
+        </div>
+    </nav>
+
+    <dialog id="menu" class="menu" aria-labelledby="titulo-menu">
+        <div class="linha">
+            <h2 id="titulo-menu">SUS</h2>
+            <form method="dialog">
+                <button class="botao-icone" aria-label="Fechar menu" autofocus>×</button>
+            </form>
+        </div>
+        <p>Versão 6.7.6.7 beta</p>
+        <ul class="lista">
+            <li><button class="servico" type="button" disabled>Termos de uso e aviso de privacidade</button></li>
+            <li><button class="servico" type="button" disabled>Sair do aplicativo</button></li>
+            <li><button class="servico" type="button" disabled>Deslogar e sair</button></li>
+        </ul>
+    </dialog>
 </body>
 </html>

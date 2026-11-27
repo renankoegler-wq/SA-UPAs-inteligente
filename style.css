@@ -1,117 +1,293 @@
-body {
-    margin: 0;
-    font-family: Arial,Sans-serif;
-    background-color: #F2F2F2;
+﻿:root {
+    --azul: #1351b4;
+    --azul-escuro: #102d62;
+    --azul-claro: #edf4ff;
+    --fundo: #f5f7fb;
+    --borda: #dbe3ee;
+    --texto: #26354d;
 }
 
-.cabecalho {
-    background-color: #2168c4;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6rem;
+* {
     box-sizing: border-box;
 }
 
-.acoes img {
-    object-fit: contain;
-    width: 4rem;
-    height: 4rem;
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom));
 }
 
-.menu-desktop img {
-    width: 2rem;
-    height: 2rem;
-    object-fit: contain;
+h1, h2, p {
+    margin: 0;
 }
 
-.acoes button {
-    background: transparent;
-    border: none;
+a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+button {
+    color: inherit;
+    font: inherit;
     cursor: pointer;
 }
 
-.menu-desktop {
-    background:transparent;
-    border: none;
-    display: none;
+button:disabled {
+    color: #526078;
+    cursor: default;
 }
 
-.susPrincipal {
+:focus-visible {
+    outline: 3px solid #a66300;
+    outline-offset: 2px;
+}
+
+.limite {
+    width: min(calc(100% - 2rem), 64rem);
+    margin-inline: auto;
+}
+
+.linha {
     display: flex;
     align-items: center;
-    gap: 10px   ;
+    justify-content: space-between;
+    gap: .75rem;
 }
 
-.susPrincipal h1 {
-    margin: 0;
+.cabecalho {
+    background: white;
+    border-top: 4px solid var(--azul);
+    border-bottom: 1px solid var(--borda);
 }
 
-@media (min-width: 1024px) {
-    .menu-desktop {
-        display: block;
-        cursor: pointer;
-    }
+.cabecalho .linha {
+    min-height: 4.25rem;
 }
 
-@media (max-width: 767px) {
-    .saudacoes {
-        background-size: auto 65%, cover;
-        background-position: right bottom, center;
-        padding-left: 1rem;
-        margin: 1m;
-    }
-
-    .saudacoes h2 {
-        font-size: 1.2rem;
-    }
+.marca, .acoes {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
-.asideBar {
+.marca {
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+.marca-sus {
+    color: var(--azul);
+    font-size: 1.5rem;
+    border-right: 1px solid var(--borda);
+    padding-right: .5rem;
+}
+
+.botao-icone {
+    width: 2.75rem;
+    height: 2.75rem;
+    background: var(--azul-claro);
+    border: 0;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: var(--azul);
+}
+
+/* Banner e lista de serviços */
+.saudacao {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 24%;
+    align-items: center;
+    gap: .5rem;
+    margin-block: 1.25rem;
+    min-height: 9.5rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border-bottom: 4px solid #ffc83f;
+    background: linear-gradient(115deg, #102d62, #1351b4);
+    color: white;
+}
+
+.saudacao h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.15;
+}
+
+.saudacao p {
+    margin-top: .5rem;
+    max-width: 30ch;
+}
+
+.saudacao img {
+    width: 100%;
+    max-height: 11rem;
+    object-fit: contain;
+}
+
+.servicos {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 1rem;
+    padding: .75rem 1rem;
+}
+
+h2 {
+    color: var(--azul-escuro);
+    font-size: 1.25rem;
+}
+
+.lista {
+    list-style: none;
+    margin: .5rem 0 0;
+    padding: 0;
+}
+
+.lista li + li {
+    border-top: 1px solid var(--borda);
+}
+
+.servico {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    width: 100%;
+    min-height: 3.25rem;
+    padding: .45rem .25rem;
+    border: 0;
+    background: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.icone {
+    display: grid;
+    place-items: center;
+    flex: 0 0 2.25rem;
+    height: 2.25rem;
+    border-radius: .65rem;
+    background: var(--azul-claro);
+    color: var(--azul);
+    font-size: 1.2rem;
+}
+
+a.servico:hover, button.botao-icone:enabled:hover {
+    background: var(--azul-claro);
+}
+
+/* Navegação inferior */
+.navegacao {
     position: fixed;
-    top: 6rem;
-    left: 0px;
-    width: 45%;
-    height: calc(100dvh - 6rem);
-    background-color: #e5f1ff;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 10;
+    inset: auto 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: white;
+    border-top: 1px solid var(--borda);
+    box-shadow: 0 -4px 16px #102d6210;
 }
 
-.asideBar h2 {
-    margin: 5px;
+.atalhos {
+    width: min(100%, 36rem);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
-.asideBar p {
-    margin: 5px
+.atalhos a, .atalhos button {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: .15rem;
+    min-height: 4.5rem;
+    padding: .25rem 0;
+    border: 0;
+    background: white;
+    font-size: .875rem;
 }
 
-.asideBar.aberta {
-    transform: translateX(0%);
+.atalhos [aria-current], .atalhos a:hover, .atalhos button:enabled:hover {
+    background: var(--azul-claro);
+    color: var(--azul);
 }
 
-.saudacoes {
-    background-color: #000B4A;
-    color: #FAFAFA;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-image: url("assets/pessoas.svg"),linear-gradient(to right, #050b43, #2168c4);
-    background-size: contain, cover;
-    background-position: 85% center, center;
-    background-repeat: no-repeat;
-    border-radius: 1px;
-    margin: 1.5rem;
-    min-height: 12rem;
+.simbolo {
+    display: grid;
+    place-items: center;
+    height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1;
 }
 
-.saudacoes h2 {
+.localizacao .simbolo {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: #d9f2e3;
+    color: #17613a;
+}
+
+/* O diálogo nativo escurece o fundo e mantém o foco dentro do menu. */
+.menu {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(85%, 22rem);
+    max-height: none;
+    height: 100%;
     margin: 0;
-    padding-left: 2rem;
+    padding: 1.25rem;
+    border: 0;
+    border-radius: 0 1rem 1rem 0;
+    color: var(--texto);
+}
+
+.menu::backdrop {
+    background: #10243a88;
+}
+
+.menu h2 {
+    color: var(--azul);
+    font-size: 1.75rem;
+}
+
+.menu p {
+    margin-block: .5rem 1rem;
+    color: #526078;
+}
+
+.menu .lista {
+    border-top: 1px solid var(--borda);
+}
+
+/* Em telas maiores, os serviços ficam lado a lado. */
+@media (min-width: 48rem) {
+    .saudacao {
+        min-height: 13rem;
+        margin-block: 2rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .saudacao p {
+        max-width: 44ch;
+    }
+
+    .servicos {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .servicos .lista {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .75rem;
+        margin-top: .75rem;
+    }
+
+    .servicos .lista li {
+        border: 1px solid var(--borda);
+        border-radius: .65rem;
+    }
+
+    .servicos .servico {
+        min-height: 3.75rem;
+        padding: .5rem .75rem;
+        border-radius: .65rem;
+    }
 }
