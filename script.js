@@ -5,7 +5,6 @@ botaoMenu.addEventListener("click", function () {
     menu.showModal();
 });
 
-// Um toque fora do painel também fecha o menu.
 menu.addEventListener("click", function (evento) {
     if (evento.target !== menu) {
         return;
