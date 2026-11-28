@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Classificação de Risco | SUS</title>
+
+    <link rel="stylesheet" href="styletriagem.css">
+</head>
+
+<body>
+
+    <a class="pular-conteudo" href="#conteudo">
+        Ir para o conteúdo principal
+    </a>
+
+    <header class="cabecalho">
+
+        <div class="limite linha">
+
+            <a class="marca" href="../../../index.html"
+               aria-label="SUS UPAs Inteligente, página inicial">
+
+                <span class="marca-sus">SUS</span>
+                <span>UPAs Inteligente</span>
+
+            </a>
+
+            <div class="acoes">
+
+                <button class="botao-icone" type="button"
+                        aria-label="Notificações" disabled>
+
+                    <span aria-hidden="true">🔔︎</span>
+
+                </button>
+
+                <button class="botao-icone" type="button"
+                        aria-label="Perfil" disabled>
+
+                    <span aria-hidden="true">👤︎</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+
+        <div class="caminho">
+
+            <a href="../../../index.html"></a>
+
+            <span></span>
+
+            <span></span>
+
+        </div>
+
+        <section class="titulo">
+
+            <div class="texto-titulo">
+
+                <span class="identificacao">Serviços de saúde</span>
+
+                <h1>Classificação de Risco</h1>
+
+                <p>
+                    Conheça os níveis de urgência e organize
+                    suas informações para o atendimento.
+                </p>
+
+            </div>
+
+            <div class="logo-upa">
+
+                <img src="../imagens/triagem-imagem.webp"
+                     alt="Imagem de triagem">
+
+            </div>
+
+        </section>
+
+        <section class="aviso-emergencia">
+
+            <strong>Em caso de emergência</strong>
+
+            <p>
+                Não aguarde o atendimento virtual.
+                Ligue para o <a href="tel:192">SAMU 192</a>.
+            </p>
+
+        </section>
+
+        <div class="container-triagem">
+
+            <section class="classificacao">
+
+                <h2>Prioridades de atendimento</h2>
+
+                <p class="descricao">
+                    A classificação de risco organiza o atendimento
+                    de acordo com a gravidade de cada caso.
+                </p>
+
+                <ul class="lista-riscos">
+
+                    <li class="risco vermelho">
+
+                        <div>
+                            <h3>Vermelho</h3>
+                            <p>Emergência</p>
+                        </div>
+
+                        <span>Prioridade máxima</span>
+
+                    </li>
+
+                    <li class="risco laranja">
+
+                        <div>
+                            <h3>Laranja</h3>
+                            <p>Muito urgente</p>
+                        </div>
+
+                    </li>
+
+                    <li class="risco amarelo">
+
+                        <div>
+                            <h3>Amarelo</h3>
+                            <p>Urgente</p>
+                        </div>
+
+                    </li>
+
+                    <li class="risco verde">
+
+                        <div>
+                            <h3>Verde</h3>
+                            <p>Pouco urgente</p>
+                        </div>
+
+                    </li>
+
+                    <li class="risco azul">
+
+                        <div>
+                            <h3>Azul</h3>
+                            <p>Não urgente</p>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+                <p class="observacao">
+                    A classificação de risco é realizada por profissionais
+                    de saúde e não depende apenas da ordem de chegada.
+                </p>
+
+            </section>
+
+            <section class="atendimento">
+
+                <div class="titulo-atendimento">
+
+                    <div>
+
+                        <h2>Assistente virtual</h2>
+
+                        <p>Orientação inicial ao paciente</p>
+
+                    </div>
+
+                    <span class="etiqueta">Demonstração</span>
+
+                </div>
+
+                <div class="conversa" id="conversa"
+                     role="log"
+                     aria-label="Histórico da conversa"
+                     aria-live="polite"
+                     tabindex="0">
+
+                    <div class="mensagem assistente">
+
+                        <strong>Assistente virtual</strong>
+
+                        <p>
+                            Olá! Vamos organizar seu relato para o
+                            atendimento. Descreva seus sintomas e
+                            quando começaram. Utilize apenas
+                            informações fictícias neste teste.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <form id="form-triagem">
+
+                    <label for="sintomas">
+                        Descreva seus sintomas
+                    </label>
+
+                    <textarea id="sintomas"
+                              name="sintomas"
+                              rows="4"
+                              maxlength="1000"
+                              placeholder="Escreva seu relato aqui..."
+                              aria-describedby="orientacao"
+                              required></textarea>
+
+                    <div class="botoes-atendimento">
+
+                        <button type="button" id="reiniciar">
+                            Reiniciar
+                        </button>
+
+                        <button type="submit" id="enviar">
+                            Enviar relato
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <div class="informacao" id="orientacao">
+
+                    <strong>Sobre o assistente</strong>
+
+                    <p>
+                        Este recurso está em desenvolvimento e não
+                        substitui uma avaliação médica.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <footer class="rodape">
+
+            <p>UPAs Inteligente — Joinville, SC</p>
+
+            <small>Projeto do SENAI.</small>
+
+        </footer>
+
+    </main>
+
+    <nav class="navegacao" aria-label="Navegação principal">
+
+        <div class="limite atalhos">
+
+            <a href="../../../index.html">
+
+                <span class="simbolo" aria-hidden="true">⌂</span>
+                Início
+
+            </a>
+
+            <a href="triagem.html" aria-current="page">
+
+                <span class="simbolo" aria-hidden="true">⚠︎</span>
+                Alertas
+
+            </a>
+
+            <button class="localizacao" type="button" disabled>
+
+                <span class="simbolo" aria-hidden="true">📍︎</span>
+                Localizar
+
+            </button>
+
+            <a href="../listagem.html">
+
+                <span class="simbolo" aria-hidden="true">✚</span>
+                UPAs
+
+            </a>
+
+            <button id="abrir-menu"
+                    type="button"
+                    aria-haspopup="dialog"
+                    aria-controls="menu"
+                    aria-expanded="false">
+
+                <span class="simbolo" aria-hidden="true">☰</span>
+                Menu
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <dialog id="menu" class="menu"
+            aria-labelledby="titulo-menu">
+
+        <div class="linha">
+
+            <h2 id="titulo-menu">SUS</h2>
+
+            <form method="dialog">
+
+                <button class="botao-icone"
+                        aria-label="Fechar menu"
+                        autofocus>
+
+                    ×
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <p>Versão 6.7.6.7 beta</p>
+
+        <ul class="lista">
+
+            <li>
+                <button class="servico" type="button" disabled>
+                    Termos de uso e aviso de privacidade
+                </button>
+            </li>
+
+            <li>
+                <button class="servico" type="button" disabled>
+                    Sair do aplicativo
+                </button>
+            </li>
+
+            <li>
+                <button class="servico" type="button" disabled>
+                    Deslogar e sair
+                </button>
+            </li>
+
+        </ul>
+
+    </dialog>
+
+    <script src="triagemscript.js"></script>
+
+</body>
+
+</html>
